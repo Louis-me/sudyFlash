@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+
+
+ {% for result in results %}
+                <tr>
+                    <td>{{ result.id }}</td>
+                    <td>{{ result.name }}</td>
+                    <td>{{ result.sex }}</td>
+                    <td><a href="/delete?id={{ result.id }}"><button>删除</button></a></td>
+                    <td><a href="/submit_insert"><button>插入</button></a></td>
+                    <td><a href="/submit_update?id={{ result.id }}"><button>修改</button></a></td>
+                </tr>
+            {% endfor %}
+</table>
+</body>
+</html>
